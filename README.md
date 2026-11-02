@@ -10,6 +10,7 @@ evidence makes a release decision easier to defend.
 Here I’m building small, reproducible projects that make those questions inspectable.
 
 [LinkedIn](https://www.linkedin.com/in/jyotirawattech/) ·
+[LeetCode](https://leetcode.com/u/user0592I/) ·
 [Engineering writing](https://jyotirawattech.substack.com/) ·
 [Engineering background](docs/engineering-background.md)
 
@@ -47,6 +48,7 @@ TCP retransmission and production recovery remain separate questions.
 | [Linux Network Reliability Lab](https://github.com/jyotirawattech/linux-network-reliability-lab) · Python | Does the monitor detect sustained failure and recovery within its lab objectives? | Fault scenarios, state machine, tests, CI and measured evidence |
 | [Release Readiness Audit](https://github.com/jyotirawattech/release-readiness-audit) · JavaScript | Where does a release workflow spend coordination effort? | Deterministic local calculator, eight aggregate inputs, documented scoring and fictional examples |
 | [Employer Posting Verifier](https://github.com/jyotirawattech/employer-posting-verifier) · Python | What can a source check establish, and when must it return Unknown? | Greenhouse-specific prototype, fictional fixtures, source-linked observations and tests |
+| [C-Tutorials: LeetCode solutions](https://github.com/jyotirawattech/C-Tutorials/blob/master/leetcode/README.md) · C | How do algorithm choices, pointer ownership and edge cases behave in C? | Accepted-source archive with submission provenance; local compilation and test results recorded separately |
 
 The release audit calculates from supplied answers; it does not inspect a deployment.
 The posting verifier records evidence; it does not authenticate employers or certify a job’s safety.
