@@ -35,7 +35,7 @@ make verify
 ```
 
 [Read the architecture](https://github.com/jyotirawattech/linux-network-reliability-lab/blob/main/docs/architecture.md) ·
-[Inspect the test results](https://github.com/jyotirawattech/linux-network-reliability-lab/blob/main/docs/results/verification-2026-09-02.md) ·
+[Inspect the test results](https://github.com/jyotirawattech/linux-network-reliability-lab/blob/a6b0ed91d073c2d4a817bb57aa57f7814115d2ca/docs/results/verification-2026-11-07.md) ·
 [View CI](https://github.com/jyotirawattech/linux-network-reliability-lab/actions)
 
 The faults are application-layer delay and request rejection. Kernel packet loss,
@@ -49,9 +49,11 @@ TCP retransmission and production recovery remain separate questions.
 | [Release Readiness Audit](https://github.com/jyotirawattech/release-readiness-audit) · JavaScript | Where does a release workflow spend coordination effort? | Deterministic local calculator, eight aggregate inputs, documented scoring and fictional examples |
 | [Employer Posting Verifier](https://github.com/jyotirawattech/employer-posting-verifier) · Python | What can a source check establish, and when must it return Unknown? | Greenhouse-specific prototype, fictional fixtures, source-linked observations and tests |
 | [C-Tutorials: LeetCode solutions](https://github.com/jyotirawattech/C-Tutorials/blob/master/leetcode/README.md) · C | How do algorithm choices, pointer ownership and edge cases behave in C? | Accepted-source archive with submission provenance; local compilation and test results recorded separately |
+| [Social Publishing Skills](https://github.com/jyotirawattech/social-publishing-skills) · Markdown / Python | How can a user-selected topic become one reviewable, platform-native draft? | Four portable skills, fictional examples, offline packet checks and CI |
 
 The release audit calculates from supplied answers; it does not inspect a deployment.
 The posting verifier records evidence; it does not authenticate employers or certify a job’s safety.
+The social skills prepare and review one text item at a time; publishing uses separately permitted tools and current authority.
 
 [Choose a project and run its example →](docs/project-guide.md)
 
