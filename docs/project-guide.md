@@ -28,7 +28,37 @@ The service stack runs for the experiment and shuts down afterward.
 records the monitor detecting restored health, not an autonomous repair of the service.
 Host load changes the timings.
 
-## 2. Explain release coordination effort
+## 2. See when retries pay off
+
+Clone [Retry Budget Lab](https://github.com/jyotirawattech/retry-budget-lab) and run this from its checkout with Python 3.11 or later:
+
+```sh
+python3 -m retry_budget_lab examples/recovery-window.json
+```
+
+The [worked result](https://github.com/jyotirawattech/retry-budget-lab/blob/565abee071e798aae501758c53ef7075346d6490/results/recovery-window.json) shows five synthetic requests. With no retries, one completes in five attempts. Fixed and exponential delays each complete three in thirteen attempts. Compare *which* requests finish as well as the totals. The clock and availability windows are simulated.
+
+## 3. See which jobs finish after shutdown begins
+
+Clone [Shutdown Boundary Lab](https://github.com/jyotirawattech/shutdown-boundary-lab) and run this from its checkout with Python 3.11 or later and access to localhost sockets:
+
+```sh
+python3 -m shutdown_lab
+```
+
+The [worked result](https://github.com/jyotirawattech/shutdown-boundary-lab/blob/c9f5a363af71ffa293872259b5c9f1df42872b1a/results/worked.json) shows three admitted jobs. All three are cancelled under immediate shutdown. With a fixed grace period, two finish and one is cancelled. The lab uses controlled job events on loopback, so the result illustrates the lifecycle policy under those conditions.
+
+## 4. Check whether green CI refers to the artifact you released
+
+Clone [Release Evidence Checker](https://github.com/jyotirawattech/release-evidence-checker) and run this from its checkout with Python 3.11 or later:
+
+```sh
+python3 -m release_evidence demo
+```
+
+The [worked result](https://github.com/jyotirawattech/release-evidence-checker/blob/09717ed9f75c495f25dc09fb3471e64d3e9d1064/results/worked.json) compares a green-status rule with checks on the supplied artifact, publication and CI records. Only one of the nine green-status claims passes the consistency checks in this synthetic set. The others show a mismatch, incomplete preparation, or an unconfirmed push. The CLI checks consistency of supplied records. It cannot authenticate the records or check a live deployment.
+
+## 5. Explain release coordination effort
 
 **Repository:** [Release Readiness Audit](https://github.com/jyotirawattech/release-readiness-audit)
 
@@ -51,7 +81,7 @@ Inspect the scoring contract and the negative examples to understand what change
 detect configuration drift, certify compliance or approve a release. Its README
 separately discloses an optional commercial route; the local example is free.
 
-## 3. Preserve uncertainty in a source check
+## 6. Preserve uncertainty in a source check
 
 **Repository:** [Employer Posting Verifier](https://github.com/jyotirawattech/employer-posting-verifier)
 

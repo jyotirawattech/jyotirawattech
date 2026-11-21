@@ -9,6 +9,7 @@ evidence makes a release decision easier to defend.
 
 Here I’m building small, reproducible projects that make those questions inspectable.
 
+[Run an experiment](docs/project-guide.md) ·
 [LinkedIn](https://www.linkedin.com/in/jyotirawattech/) ·
 [LeetCode](https://leetcode.com/u/user0592I/) ·
 [Engineering writing](https://jyotirawattech.substack.com/) ·
@@ -26,7 +27,7 @@ A threshold-based monitor measures when it detects failure and the subsequent re
 - Python standard library; no package installation needed.
 - Unit and integration tests, an 80% statement-line coverage gate, and Linux CI on Python 3.11 and 3.13.
 - Architecture diagram, decision record, measured results and a leadership/release memo.
-- The public verification record reports 9 passing tests and 81.4% statement-line coverage.
+- The 7 November verification record reports 9 passing tests and 81.4% statement-line coverage.
 
 ```sh
 git clone https://github.com/jyotirawattech/linux-network-reliability-lab.git
@@ -40,6 +41,14 @@ make verify
 
 The faults are application-layer delay and request rejection. Kernel packet loss,
 TCP retransmission and production recovery remain separate questions.
+
+<!-- github-profile-curator:start -->
+## Reliability and release experiments
+
+- [Retry Budget Lab](https://github.com/jyotirawattech/retry-budget-lab) — Compare no retries\, fixed delays and exponential backoff in an offline simulation\. See which requests recover and how many extra attempts each policy makes\.
+- [Shutdown Boundary Lab](https://github.com/jyotirawattech/shutdown-boundary-lab) — Run a local TCP service and compare immediate cancellation with a fixed grace period\. See which admitted jobs finish and how the service cleans up\.
+- [Release Evidence Checker](https://github.com/jyotirawattech/release-evidence-checker) — Check whether supplied artifact\, publication and CI records agree\. Try the offline CLI on synthetic examples where a green CI status hides mismatched evidence\.
+<!-- github-profile-curator:end -->
 
 ## Selected projects
 
